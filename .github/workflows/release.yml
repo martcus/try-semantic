@@ -28,6 +28,7 @@ jobs:
       - name: Install dependencies
         run: npx ci
        
+      # semantic-release: it comes pre-installed in GitHub actions by default
       - name: Install semantic-release extra plugins
         run: |
               npm install --save-dev \\
