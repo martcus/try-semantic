@@ -29,7 +29,7 @@ jobs:
         run: npx ci
        
       - name: Install semantic-release extra plugins
-         run: |
+        run: |
               npm install --save-dev \\
                 semantic-release
                 @semantic-release/commit-analyzer \\
