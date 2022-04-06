@@ -34,7 +34,7 @@ prepare:
   - path: "@semantic-release/git"
     asset: ["CHANGELOG.md"]
   - path: "@semantic-release/changelog"
-    changelogFile: ["CHANGELOG.md", "dist/**"]
+    changelogFile: ["CHANGELOG.md"]
 
 publish:
   - path: "@semantic-release/github"
