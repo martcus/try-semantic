@@ -38,7 +38,7 @@ prepare:
 
 publish:
   - path: "@semantic-release/github"
-    assets: ["CHANGELOG.md", "dist/**"],
+    assets: ["CHANGELOG.md", "dist/**"]
     message: "chore(release): set `package.json` to ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
 
 success:
