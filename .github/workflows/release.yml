@@ -4,6 +4,8 @@ name: Semantic Release
 
 # Controls when the workflow will run
 on:
+  repository_dispatch:
+    types: [semantic-release]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
