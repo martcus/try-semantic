@@ -1,29 +1,48 @@
-{
-  "branches": ["master"],
-  
- # https://semantic-release.gitbook.io/semantic-release/extending/plugins-list 
-  "plugins": [
-    # https://github.com/semantic-release/commit-analyzer     
-    ["@semantic-release/commit-analyzer", {
-      "preset": "conventionalcommits"
-    }],
-    
-    # https://github.com/semantic-release/release-notes-generator 
-    ["@semantic-release/release-notes-generator", {
-      "preset": "conventionalcommits"
-    }],
+branches: [master]
+preset: "conventionalcommits"
+tagFormat: "v${version}"
 
-    ["@semantic-release/changelog", {
-      "changelogFile": "CHANGELOG.md"
-    }],
+plugins:
+  - "@semantic-release/commit-analyzer"
+  - "@semantic-release/release-notes-generator"
+  - "@semantic-release/changelog"
+  - "@semantic-release/git"
+  - "@semantic-release/github"
 
-    ["@semantic-release/git", {
-      "assets": ["CHANGELOG.md"]
-    }],
+verifyConditions:
+  # Verify the presence and the validity of the Git authentication and release configuration
+  - '@semantic-release/git'
+  # Verify the presence and the validity of the GitHub authentication and release configuration
+  - "@semantic-release/github"
 
-    ["@semantic-release/github", {
-      "assets": ["CHANGELOG.md", "dist/**"],
-      "message": "chore(release): set `package.json` to ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-    }] 
-  ]
-}
+analyzeCommits:
+  - path: "@semantic-release/commit-analyzer"
+
+# verifyRelease
+
+generateNotes:
+  - path: "@semantic-release/release-notes-generator"
+    writerOpts:
+      groupBy: "type"
+      commitGroupsSort:
+        - "feat"
+        - "perf"
+        - "fix"
+      commitsSort: "header"
+
+prepare:
+  - path: "@semantic-release/git"
+    asset: ["CHANGELOG.md"]
+  - path: "@semantic-release/changelog"
+    changelogFile: ["CHANGELOG.md", "dist/**"]
+
+publish:
+  - path: "@semantic-release/github"
+    assets: ["CHANGELOG.md", "dist/**"],
+    message: "chore(release): set `package.json` to ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+
+success:
+  - "@semantic-release/github"
+
+fail:
+  - "@semantic-release/github"
