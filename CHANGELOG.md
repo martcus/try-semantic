@@ -1,3 +1,11 @@
+## [3.1.0](https://github.com/martcus/try-semantic/compare/v3.0.0...v3.1.0) (2022-04-06)
+
+
+### Features
+
+* **readme.md:** add workflow status badge ([e03322d](https://github.com/martcus/try-semantic/commit/e03322de6884241099d4ddd462a6c10d40765685))
+* **workflow:** add repository_dispatch ([5db4152](https://github.com/martcus/try-semantic/commit/5db41527ca8ed8f52e85046bfc0b1254e80221f7))
+
 ## [3.0.0](https://github.com/martcus/try-semantic/compare/v2.0.2...v3.0.0) (2022-04-06)
 
 
