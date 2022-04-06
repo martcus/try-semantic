@@ -1,3 +1,7 @@
+# Ref:
+# - https://github.com/semantic-release/semantic-release
+# - https://semantic-release.gitbook.io/semantic-release/extending/plugins-list
+
 branches: [master]
 preset: "conventionalcommits"
 tagFormat: "v${version}"
@@ -9,17 +13,23 @@ plugins:
   - "@semantic-release/git"
   - "@semantic-release/github"
 
+# Verify all the conditions to proceed with the release.
 verifyConditions:
   # Verify the presence and the validity of the Git authentication and release configuration
   - '@semantic-release/git'
   # Verify the presence and the validity of the GitHub authentication and release configuration
   - "@semantic-release/github"
 
+# 1. Obtain the commit corresponding to the last release by analyzing Git tags
+# 2. Determine the type of release based on the commits added since the last release.
 analyzeCommits:
   - path: "@semantic-release/commit-analyzer"
 
-# verifyRelease
+# Verify the release conformity.
+#verifyRelease:
+#  - path: ""
 
+# Generate release notes for the commits added since the last release
 generateNotes:
   - path: "@semantic-release/release-notes-generator"
     writerOpts:
@@ -30,19 +40,24 @@ generateNotes:
         - "fix"
       commitsSort: "header"
 
+# 1. Create a Git tag corresponding to the new release version
+# 2. Prepare the release
 prepare:
+  # Push a release commit and tag, including configurable files
   - path: "@semantic-release/git"
     asset: ["CHANGELOG.md"]
+  # Create or update the changelog file in the local project repository
   - path: "@semantic-release/changelog"
     changelogFile: "CHANGELOG.md"
 
+# Publish the release
 publish:
   - path: "@semantic-release/github"
     assets: ["CHANGELOG.md", "dist/**"]
     message: "chore(release): set `package.json` to ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
 
+# Notify of new releases or errors.
 success:
   - "@semantic-release/github"
-
 fail:
   - "@semantic-release/github"
