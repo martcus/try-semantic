@@ -6,7 +6,8 @@
     "@semantic-release/release-notes-generator",
     "@semantic-release/git",
     ["@semantic-release/changelog", {
-      "changelogFile": ["CHANGELOG.md"]
+      "changelogFile": "CHANGELOG.md",
+      "changelogTitle": "Title"
     }],
     ["@semantic-release/github", {
       "assets": ["CHANGELOG.md", "dist/**"],
