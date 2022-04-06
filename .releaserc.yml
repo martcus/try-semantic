@@ -43,12 +43,12 @@ generateNotes:
 # 1. Create a Git tag corresponding to the new release version
 # 2. Prepare the release
 prepare:
-  # Push a release commit and tag, including configurable files
-  - path: "@semantic-release/git"
-    asset: ["CHANGELOG.md"]
   # Create or update the changelog file in the local project repository
   - path: "@semantic-release/changelog"
     changelogFile: "CHANGELOG.md"
+  # Push a release commit and tag, including configurable files
+  - path: "@semantic-release/git"
+    asset: ["CHANGELOG.md"]
 
 # Publish the release
 publish:
