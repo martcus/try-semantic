@@ -1,11 +1,3 @@
 # try-semantic
 
-the pen is on the table
-
-It's rain cats & dogs
-
-BREAKING CHANGE!!!
-
-Another!!!
-
-The last of us
+[![Semantic Release](https://github.com/martcus/try-semantic/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/martcus/try-semantic/actions/workflows/release.yml)
