@@ -1,3 +1,10 @@
+### [4.0.2](https://github.com/martcus/try-semantic/compare/v4.0.1...v4.0.2) (2022-04-06)
+
+
+### Bug Fixes
+
+* **.releaserc:** order in prepare step ([780e99d](https://github.com/martcus/try-semantic/commit/780e99d6bce8347c54b4e45aa8d5c6aeb8719be2))
+
 ## [3.1.0](https://github.com/martcus/try-semantic/compare/v3.0.0...v3.1.0) (2022-04-06)
 
 
