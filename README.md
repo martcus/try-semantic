@@ -8,6 +8,6 @@ an exercise of using [semantic-release](https://github.com/semantic-release/sema
 - release.yml
 
 ## next task/implementation ideas
-- [ ] https://github.com/martcus/try-semantic/issues/4
-- [ ] https://github.com/martcus/try-semantic/issues/5
+- [ ] https://github.com/martcus/try-semantic/issues/4 Document workflows and configurations in the readme file
+- [ ] https://github.com/martcus/try-semantic/issues/5 when a pr is opened, trigger a specific workflow in order check the format of commit messages via [commitlint](https://commitlint.js.org/#/guides-ci-setup)
 - [ ] protect from direct push the master branch via github settings
