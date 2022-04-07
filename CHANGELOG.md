@@ -1,3 +1,10 @@
+## [4.1.0-develop.2](https://github.com/martcus/try-semantic/compare/v4.1.0-develop.1...v4.1.0-develop.2) (2022-04-07)
+
+
+### Features
+
+* **readme:** update description ([d5d5f9b](https://github.com/martcus/try-semantic/commit/d5d5f9b6bb4d5b67ba8b3213ce43b7fdfa174064))
+
 ## [4.1.0-develop.1](https://github.com/martcus/try-semantic/compare/v4.0.2...v4.1.0-develop.1) (2022-04-07)
 
 
