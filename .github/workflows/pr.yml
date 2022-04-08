@@ -51,7 +51,7 @@ jobs:
           script: |
             console.log(context);
 
-      - name: Log workflow context
+      - name: Analyze PR commit message
         uses: actions/github-script@v6
         with:
           script: |
@@ -63,7 +63,7 @@ jobs:
             })
             console.log("Commit list:")
             for (const commit of commits.data) {
-              console.log(commit.sha + ': ' + commit.commit.message)
+              console.log('- ' + commit.sha + ': ' + commit.commit.message)
             }
             ;
           result-encoding: string
