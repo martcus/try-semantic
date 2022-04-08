@@ -33,7 +33,9 @@ jobs:
                 @semantic-release/changelog \
                 @semantic-release/git \
                 @semantic-release/release-notes-generator \
-                conventional-changelog-conventionalcommits
+                conventional-changelog-conventionalcommits \
+                @commitlint/cli \
+                @commitlint/config-conventional
 
       - name: Dump GitHub context
         id: github_context_step
@@ -50,6 +52,9 @@ jobs:
         with:
           script: |
             console.log(context);
+
+      - name: Validate all commits from PR
+        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
 
       - name: Analyze PR commit message
         uses: actions/github-script@v6
