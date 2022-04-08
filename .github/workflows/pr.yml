@@ -26,52 +26,12 @@ jobs:
         with:
           node-version: 'lts/*'
       
-      # semantic-release: it comes pre-installed in GitHub actions by default
-      - name: Install semantic-release extra plugins
+      - name: Install commitlint plugins
         run: |
               npm install --save-dev \
-                semantic-release \
-                @semantic-release/commit-analyzer \
-                @semantic-release/changelog \
-                @semantic-release/git \
-                @semantic-release/release-notes-generator \
-                conventional-changelog-conventionalcommits \
                 @commitlint/cli \
                 @commitlint/config-conventional
-
-      - name: Dump GitHub context
-        id: github_context_step
-        run: echo '${{ toJSON(github) }}'
-      - name: Dump job context
-        run: echo '${{ toJSON(job) }}'
-      - name: Dump steps context
-        run: echo '${{ toJSON(steps) }}'
-      - name: Dump runner context
-        run: echo '${{ toJSON(runner) }}'
-
-      - name: Log workflow context
-        uses: actions/github-script@v6
-        with:
-          script: |
-            console.log(context);
-
-      - name: Analyze PR commit message
-        uses: actions/github-script@v6
-        with:
-          script: |
-            // ref: https://octokit.github.io/rest.js/v18#pulls-list-commits
-            commits = await github.rest.pulls.listCommits({
-              owner: "martcus", 
-              repo: "try-semantic", 
-              pull_number: context.payload.number
-            })
-            console.log("Commit list:")
-            for (const commit of commits.data) {
-              console.log('- ' + commit.sha + ': ' + commit.commit.message)
-            }
-            ;
-          result-encoding: string
-          
+  
       - name: Validate all commits from PR
         run: |
           echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
