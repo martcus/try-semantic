@@ -4,7 +4,7 @@ on:
     branches:
       - develop
       - master
-    types: [opened, edited]
+    types: [opened, synchronize, reopened, edited]
     
   workflow_dispatch:
     
@@ -33,7 +33,9 @@ jobs:
                 @semantic-release/changelog \
                 @semantic-release/git \
                 @semantic-release/release-notes-generator \
-                conventional-changelog-conventionalcommits
+                conventional-changelog-conventionalcommits \
+                @commitlint/cli \
+                @commitlint/config-conventional
 
       - name: Dump GitHub context
         id: github_context_step
@@ -44,16 +46,30 @@ jobs:
         run: echo '${{ toJSON(steps) }}'
       - name: Dump runner context
         run: echo '${{ toJSON(runner) }}'
-        
+
       - name: Log workflow context
         uses: actions/github-script@v6
         with:
           script: |
             console.log(context);
-          result-encoding: string
-       
-      - name: Get commit message
+
+      - name: Analyze PR commit message
         uses: actions/github-script@v6
         with:
           script: |
-            console.log("hello, world!");
+            // ref: https://octokit.github.io/rest.js/v18#pulls-list-commits
+            commits = await github.rest.pulls.listCommits({
+              owner: "martcus", 
+              repo: "try-semantic", 
+              pull_number: context.payload.number
+            })
+            console.log("Commit list:")
+            for (const commit of commits.data) {
+              console.log('- ' + commit.sha + ': ' + commit.commit.message)
+            }
+            ;
+          result-encoding: string
+          
+      - name: Validate all commits from PR
+        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+
