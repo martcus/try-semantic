@@ -4,7 +4,7 @@ on:
     branches:
       - develop
       - master
-    types: [opened, edited]
+    types: [opened, synchronize, reopened, edited]
     
   workflow_dispatch:
     
@@ -50,6 +50,7 @@ jobs:
         with:
           script: |
             console.log(context);
+            console.log(context.payload.number)
           result-encoding: string
        
       - name: Get commit message
@@ -57,4 +58,3 @@ jobs:
         with:
           script: |
             console.log("hello, world!");
-            console.log( {{ GITHUB_REF }} );
