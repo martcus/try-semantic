@@ -50,11 +50,19 @@ jobs:
         with:
           script: |
             console.log(context);
+            console.log("-------------")
+            
             console.log(context.payload.number)
+            
+            // ref: https://octokit.github.io/rest.js/v18#pulls-list-commits
+            commits = await github.rest.pulls.listCommits({
+              owner: "martcus", 
+              repo: "try-semantic", 
+              pull_number: context.payload.number
+            })
+            console.log("Commit list:")
+            for (const commit of commits.data) {
+              console.log(commit.sha)
+              console.log(commit.commit.message)
+            }
           result-encoding: string
-       
-      - name: Get commit message
-        uses: actions/github-script@v6
-        with:
-          script: |
-            console.log("hello, world!");
