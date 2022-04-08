@@ -44,16 +44,17 @@ jobs:
         run: echo '${{ toJSON(steps) }}'
       - name: Dump runner context
         run: echo '${{ toJSON(runner) }}'
-        
+
       - name: Log workflow context
         uses: actions/github-script@v6
         with:
           script: |
             console.log(context);
-            console.log("-------------")
-            
-            console.log(context.payload.number)
-            
+
+      - name: Log workflow context
+        uses: actions/github-script@v6
+        with:
+          script: |
             // ref: https://octokit.github.io/rest.js/v18#pulls-list-commits
             commits = await github.rest.pulls.listCommits({
               owner: "martcus", 
@@ -62,7 +63,7 @@ jobs:
             })
             console.log("Commit list:")
             for (const commit of commits.data) {
-              console.log(commit.sha)
-              console.log(commit.commit.message)
+              console.log(commit.sha + ': ' + commit.commit.message)
             }
+            ;
           result-encoding: string
