@@ -51,7 +51,7 @@ jobs:
             console.log(context);
           result-encoding: string
        
-      - name: Get alla commit message
+      - name: Get commit message
         uses: actions/github-script@v6
         with:
           script: |
