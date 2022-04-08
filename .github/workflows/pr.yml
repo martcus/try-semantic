@@ -1,4 +1,4 @@
-name: CI/CD PR merged dispatch
+name: Conventional Commit
 on:
   pull_request:
     branches:
