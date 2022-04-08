@@ -57,3 +57,4 @@ jobs:
         with:
           script: |
             console.log("hello, world!");
+            console.log( {{ GITHUB_REF }} );
