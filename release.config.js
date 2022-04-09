@@ -32,7 +32,7 @@ module.exports = {
     ],
     ["@semantic-release/github", {
       "assets": [
-        {"path": "CHANGELOG.md", "label": "changelog"},
+        {"path": "CHANGELOG.md"},
         {"path": "dist/**", "label": "distribution"}
       ]
     }],
