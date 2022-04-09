@@ -10,10 +10,6 @@ module.exports = {
       name: 'develop',
       prerelease: true
     },
-    {
-      name: 'feat/*',
-      prerelease: true
-    }
   ],
   'preset': 'conventionalcommits',
   'tagFormat': 'v${version}',
