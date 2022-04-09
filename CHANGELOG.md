@@ -1,3 +1,10 @@
+### [4.2.4](https://github.com/martcus/try-semantic/compare/v4.2.3...v4.2.4) (2022-04-09)
+
+
+### Bug Fixes
+
+* **semantic-version:** git assets path ([84c0a99](https://github.com/martcus/try-semantic/commit/84c0a99ea8f78f3ef9b490d982960a0b8b48d76a))
+
 ### [4.2.1](https://github.com/martcus/try-semantic/compare/v4.2.0...v4.2.1) (2022-04-09)
 
 
