@@ -1,3 +1,18 @@
+## [4.2.0](https://github.com/martcus/try-semantic/compare/v4.1.0...v4.2.0) (2022-04-09)
+
+
+### Bug Fixes
+
+* **.releaserc:** github config assets yml ([7211646](https://github.com/martcus/try-semantic/commit/7211646a54a81d5d85cb4102647b6bdb3fe6447e))
+* **workflow:** commitlint step ([79e9743](https://github.com/martcus/try-semantic/commit/79e9743cc08368f8d77d10b26f83e6d97266c98d)), closes [#11](https://github.com/martcus/try-semantic/issues/11)
+* **workflow:** workflow cleanup ([bfae67c](https://github.com/martcus/try-semantic/commit/bfae67cd23867e9e526b62bbf208892dfbb19495))
+
+
+### Features
+
+* **.releaserc:** update config github plugin ([ca208d7](https://github.com/martcus/try-semantic/commit/ca208d7e1f9ba5f7c5636356eb953cbeca680cf9))
+* **workflow:** Merge pull request [#6](https://github.com/martcus/try-semantic/issues/6) from martcus/5-pr-check ([0ba5312](https://github.com/martcus/try-semantic/commit/0ba531243a423a4ed0a702604a88dbac0fa9abe1))
+
 ## [4.1.0](https://github.com/martcus/try-semantic/compare/v4.0.2...v4.1.0) (2022-04-07)
 
 
