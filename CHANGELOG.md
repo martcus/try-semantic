@@ -1,3 +1,10 @@
+### [4.2.1](https://github.com/martcus/try-semantic/compare/v4.2.0...v4.2.1) (2022-04-09)
+
+
+### Bug Fixes
+
+* **.releaserc:** revert github assets config ([024c9d8](https://github.com/martcus/try-semantic/commit/024c9d8f92c001d90330cc782329bff4bb51c269))
+
 ## [4.2.0](https://github.com/martcus/try-semantic/compare/v4.1.0...v4.2.0) (2022-04-09)
 
 
