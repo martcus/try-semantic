@@ -5,25 +5,17 @@
 
 version: 2
 updates:
+  # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
-    schedule:
-      interval: "daily"
     commit-message:
       prefix: "fix: "
       prefix-development: "chore"
       include: "scope"
     labels:
+      - "dependencies"
       - "github-actions"
-      - "dependabot"
-  - package-ecosystem: "npm"
-    directory: "/"
     schedule:
       interval: "daily"
-    commit-message:
-      prefix: "fix: "
-      prefix-development: "chore"
-      include: "scope"
-    labels: 
-      - "npm"
-      - "dependabot"
+      time: "04:00"
+      timezone: Europe/Rome
