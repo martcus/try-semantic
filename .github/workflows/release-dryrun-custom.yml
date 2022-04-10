@@ -27,6 +27,8 @@ jobs:
 
       - name: Create minimal release.config.js
         run: |
+          pwd
+          cat release.config.js
           echo <<EOF > release.config.js 
             module.exports = {
               'branches': [
