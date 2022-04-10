@@ -40,5 +40,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npx semantic-release --dry-run --no-ci > dryrun.log
-          cat dryrun.log | grep 'The next release version is'
+          npx semantic-release --dry-run --no-ci
+          cat .VERSION
