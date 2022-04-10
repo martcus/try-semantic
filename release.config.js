@@ -13,23 +13,15 @@ module.exports = {
   ],
   'preset': 'conventionalcommits',
   'tagFormat': 'v${version}',
-  
   'plugins': [
-    ["@semantic-release/exec", {
-        "verifyReleaseCmd": "echo ${nextRelease.version} > .VERSION"
-      }
-    ],
-    
     '@semantic-release/commit-analyzer',
-    
     ['@semantic-release/release-notes-generator', {
         preset: 'conventionalcommits',
         "writerOpts": {
           "commitsSort": ["perf", "feat", "fix"],
         }
       }
-    ],
-    
+    ],    
     ['@semantic-release/changelog', {
         "changelogFile": "CHANGELOG.md",
       }
@@ -44,5 +36,9 @@ module.exports = {
         {"path": "dist/**", "label": "distribution"}
       ]
     }],
+    ["@semantic-release/exec", {
+        "verifyReleaseCmd": "echo ${nextRelease.version} > .VERSION"
+      }
+    ],
   ]
 }
