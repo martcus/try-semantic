@@ -1,3 +1,23 @@
+## [4.3.0](https://github.com/martcus/try-semantic/compare/v4.2.4...v4.3.0) (2022-04-10)
+
+
+### Features
+
+* print nextVersion ([1b0b7d2](https://github.com/martcus/try-semantic/commit/1b0b7d2bb0ba2a664d1da833198a450921e97c84))
+* **semantic-release:** add semantic-release/exec ([953986d](https://github.com/martcus/try-semantic/commit/953986ddd84dcac211fa74805fde98bb9b5d83cf))
+* add dependabot via github ([9496321](https://github.com/martcus/try-semantic/commit/9496321ed6566e23fbb3d83bc4f11f2809426a83))
+* add dependabot config ([c825126](https://github.com/martcus/try-semantic/commit/c825126efde8bbeb7c24fe1c4f2b75552f4cc184))
+* **commitlint:** add commitling config file ([b22d819](https://github.com/martcus/try-semantic/commit/b22d819e7ace34e2bf0745db1394dcddbc0a4606))
+
+
+### Bug Fixes
+
+* **workflow:** change name dry-run workflow ([32e8aca](https://github.com/martcus/try-semantic/commit/32e8aca5c674ac161f8d33c13d2a3651f8ba53aa))
+* **workflow:** rename release workflow ([bb82ddc](https://github.com/martcus/try-semantic/commit/bb82ddcaeebc91f3bbe138fde2d9956efc0dc2cf))
+* **semantic-release:** remove semantic-release/exec ([d0415cd](https://github.com/martcus/try-semantic/commit/d0415cd36ddf65020b8f2abc0008a2cb767105f7))
+* **semantic-release:** plugins order ([c420833](https://github.com/martcus/try-semantic/commit/c420833ba5698f61f45ed59ba311072a6710c55e))
+* **workflow:** use of commitlint conf ([b95d539](https://github.com/martcus/try-semantic/commit/b95d539c79719e0f3baebd76df919c753cb48723))
+
 ### [4.2.4](https://github.com/martcus/try-semantic/compare/v4.2.3...v4.2.4) (2022-04-09)
 
 
