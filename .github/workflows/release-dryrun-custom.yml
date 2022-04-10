@@ -1,4 +1,4 @@
-name: Custom Dry-Run Release
+name: Dry-Run Release
 
 # Controls when the workflow will run
 on:
@@ -27,28 +27,27 @@ jobs:
 
       - name: Create minimal release.config.js
         run: |
-          cat /dev/null > release.config.js
-          echo <<EOF >> release.config.js \
-          module.exports = { \
-            'branches': [ \
-              'master', \
-            'preset': 'conventionalcommits', \
-            'tagFormat': 'v${version}', \
-            'plugins': [ \
-              '@semantic-release/commit-analyzer', \
-              ['@semantic-release/release-notes-generator', { \
-                  preset: 'conventionalcommits', \
-                  "writerOpts": { \
-                    "commitsSort": ["perf", "feat", "fix"], \
-                  } \
-                } \
-              ], \
-              ["@semantic-release/exec", { \
-                  "verifyReleaseCmd": "echo ${nextRelease.version} > .VERSION" \
-                } \
-              ], \
-            ] \
-          } \
+          echo <<EOF > release.config.js 
+            module.exports = {
+              'branches': [
+                'master',
+              'preset': 'conventionalcommits',
+              'tagFormat': 'v${version}',
+              'plugins': [
+                '@semantic-release/commit-analyzer',
+                ['@semantic-release/release-notes-generator', {
+                    preset: 'conventionalcommits',
+                    "writerOpts": {
+                      "commitsSort": ["perf", "feat", "fix"],
+                    }
+                  }
+                ],
+                ["@semantic-release/exec", {
+                    "verifyReleaseCmd": "echo ${nextRelease.version} > .VERSION"
+                  }
+                ],
+              ]
+            }
           EOF
        
       # semantic-release: it comes pre-installed in GitHub actions by default
@@ -71,4 +70,3 @@ jobs:
       - name: Version
         run: |
           echo "Next version: ${{ steps.dry-run.outputs.nextversion }}"
-          
