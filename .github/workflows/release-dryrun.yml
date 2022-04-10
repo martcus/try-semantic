@@ -35,8 +35,8 @@ jobs:
                 @semantic-release/git \
                 @semantic-release/release-notes-generator \
                 conventional-changelog-conventionalcommits
-      - name: Release
+      - name: Dry-Run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "npx semantic-release"
+          npx semantic-release --dry-run --no-ci
