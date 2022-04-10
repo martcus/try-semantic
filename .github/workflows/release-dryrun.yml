@@ -1,4 +1,4 @@
-name: Semantic Release
+name: Dry-Run Semantic Release
 
 # Controls when the workflow will run
 on:
