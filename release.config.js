@@ -21,7 +21,11 @@ module.exports = {
           "commitsSort": ["perf", "feat", "fix"],
         }
       }
-    ],    
+    ],
+    ["@semantic-release/exec", {
+        "verifyReleaseCmd": "echo ${nextRelease.version} > .VERSION"
+      }
+    ],
     ['@semantic-release/changelog', {
         "changelogFile": "CHANGELOG.md",
       }
