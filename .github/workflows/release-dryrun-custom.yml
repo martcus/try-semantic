@@ -22,8 +22,8 @@ jobs:
         with:
           node-version: 'lts/*'
         
-      - name: Install dependencies
-        run: npx ci
+      # - name: Install dependencies
+      #  run: npx ci
 
       - name: Create minimal release.config.js
         run: |
