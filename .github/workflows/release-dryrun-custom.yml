@@ -43,7 +43,7 @@ jobs:
                   }
                 ],
                 ["@semantic-release/exec", {
-                    "verifyReleaseCmd": "echo ${nextRelease.version} > .VERSION"
+                    "verifyReleaseCmd": "echo \${nextRelease.version} > .VERSION"
                   }
                 ],
               ]
