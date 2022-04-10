@@ -8,10 +8,6 @@ updates:
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
-    commit-message:
-      prefix: "fix: "
-      prefix-development: "chore"
-      include: "scope"
     labels:
       - "dependencies"
       - "github-actions"
