@@ -36,9 +36,5 @@ module.exports = {
         {"path": "dist/**", "label": "distribution"}
       ]
     }],
-    ["@semantic-release/exec", {
-        "verifyReleaseCmd": "echo ${nextRelease.version} > .VERSION"
-      }
-    ],
   ]
 }
