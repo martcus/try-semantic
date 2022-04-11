@@ -35,6 +35,7 @@ jobs:
             module.exports = {
               'branches': [
                 'master',
+              ],
               'preset': 'conventionalcommits',
               'tagFormat': 'v${version}',
               'plugins': [
