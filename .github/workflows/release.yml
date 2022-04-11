@@ -1,4 +1,4 @@
-name: Release
+name: Full Release
 
 # Controls when the workflow will run
 on:
