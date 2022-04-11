@@ -1,4 +1,4 @@
-name: Dry-Run Release
+name: Full release dry-run
 
 # Controls when the workflow will run
 on:
