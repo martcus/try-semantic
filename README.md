@@ -1,6 +1,10 @@
 # try-semantic
 
-[![Semantic Release](https://github.com/martcus/try-semantic/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/martcus/try-semantic/actions/workflows/release.yml)
+[![Conventional Commit](https://github.com/martcus/try-semantic/actions/workflows/pr.yml/badge.svg)](https://github.com/martcus/try-semantic/actions/workflows/pr.yml)
+[![Full Release](https://github.com/martcus/try-semantic/actions/workflows/release.yml/badge.svg)](https://github.com/martcus/try-semantic/actions/workflows/release.yml)
+[![Full release dry-run](https://github.com/martcus/try-semantic/actions/workflows/release-dryrun.yml/badge.svg)](https://github.com/martcus/try-semantic/actions/workflows/release-dryrun.yml)
+[![Real-time config release](https://github.com/martcus/try-semantic/actions/workflows/release-custom.yml/badge.svg)](https://github.com/martcus/try-semantic/actions/workflows/release-custom.yml)
+[![Real-time dry-run config release](https://github.com/martcus/try-semantic/actions/workflows/release-dryrun-custom.yml/badge.svg)](https://github.com/martcus/try-semantic/actions/workflows/release-dryrun-custom.yml)
 
 an exercise of using [semantic-release](https://github.com/semantic-release/semantic-release) and [commitlint](https://commitlint.js.org/) with [conventionalcommit](https://www.conventionalcommits.org/en/v1.0.0/)
 
