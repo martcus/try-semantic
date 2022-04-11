@@ -85,7 +85,9 @@ jobs:
         id: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+        run: | 
+          npx semantic-release
+          echo "::set-output name=nextversion::$(cat .VERSION)"
       
       - name: Version
         run: |
