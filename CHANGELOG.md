@@ -1,3 +1,18 @@
+## [4.4.0](https://github.com/martcus/try-semantic/compare/v4.3.0...v4.4.0) (2022-04-11)
+
+
+### Features
+
+* **workflow:** new experiment ^_^ ([a5fc657](https://github.com/martcus/try-semantic/commit/a5fc6571e283ac5b1813093aa14b1416463057ec))
+
+
+### Bug Fixes
+
+* **workflow:** bad substitution ([f163a85](https://github.com/martcus/try-semantic/commit/f163a8590b6b1b1a2a4b9f70ffe6cfa66aac9cea))
+* **workflow:** change workflow name ([28d45ad](https://github.com/martcus/try-semantic/commit/28d45ad564226c9a8b6145f5eede143e5ac0eec7))
+* **workflow:** change workflow name ([211a440](https://github.com/martcus/try-semantic/commit/211a440fb719b826e0565291839655b05c0795af))
+* **workflow:** test real-time dry-run config ([ddc5178](https://github.com/martcus/try-semantic/commit/ddc51783357877b7d34d0b1e6596f04e50c3aeb8))
+
 ## [4.3.0](https://github.com/martcus/try-semantic/compare/v4.2.4...v4.3.0) (2022-04-10)
 
 
