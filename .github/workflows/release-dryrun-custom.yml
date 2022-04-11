@@ -24,11 +24,13 @@ jobs:
         
       # - name: Install dependencies
       #  run: npx ci
-
+      
+      - name: Cat repo release.config.js
+        run: 
+          cat release.config.js
+          
       - name: Create minimal release.config.js
         run: |
-          pwd
-          cat release.config.js
           echo <<EOF > release.config.js 
             module.exports = {
               'branches': [
@@ -51,7 +53,11 @@ jobs:
               ]
             }
           EOF
-       
+     
+      - name: Cat new release.config.js
+        run: 
+          cat release.config.js
+          
       # semantic-release: it comes pre-installed in GitHub actions by default
       - name: Install semantic-release extra plugins
         run: |
