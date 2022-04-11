@@ -1,3 +1,10 @@
+### [4.4.1](https://github.com/martcus/try-semantic/compare/v4.4.0...v4.4.1) (2022-04-11)
+
+
+### Bug Fixes
+
+* **workflow:** speed error -.- ([68be45e](https://github.com/martcus/try-semantic/commit/68be45ec87d64829ba0abbc3f493badb5d58d3d7))
+
 ## [4.4.0](https://github.com/martcus/try-semantic/compare/v4.3.0...v4.4.0) (2022-04-11)
 
 
