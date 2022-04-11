@@ -82,10 +82,11 @@ jobs:
                 conventional-changelog-conventionalcommits
 
       - name: Release
+        id: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
       
       - name: Version
         run: |
-          echo "Next version: ${{ steps.dry-run.outputs.nextversion }}"
+          echo "Next version: ${{ steps.release.outputs.nextversion }}"
