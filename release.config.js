@@ -11,10 +11,12 @@ module.exports = {
       prerelease: true
     },
   ],
-  'preset': 'conventionalcommits',
   'tagFormat': 'v${version}',
   'plugins': [
-    '@semantic-release/commit-analyzer',
+    ['@semantic-release/commit-analyzer', {
+      preset: 'conventionalcommits',
+      }
+    ],
     ['@semantic-release/release-notes-generator', {
         preset: 'conventionalcommits',
         "writerOpts": {
