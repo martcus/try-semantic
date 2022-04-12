@@ -1,3 +1,11 @@
+### [4.4.3](https://github.com/martcus/try-semantic/compare/v4.4.2...v4.4.3) (2022-04-12)
+
+
+### Bug Fixes
+
+* **config:** preset for commitanalyzer ([f1971df](https://github.com/martcus/try-semantic/commit/f1971dfdc22c69bd7783d697aec5a40da9612028))
+* (deps): bump actions/setup-node from 3.1.0 to 3.1.1 ([#20](https://github.com/martcus/try-semantic/issues/20)) ([b4de548](https://github.com/martcus/try-semantic/commit/b4de548d896ff6009e35d295fa5f9879a83dac00))
+
 ### [4.4.2](https://github.com/martcus/try-semantic/compare/v4.4.1...v4.4.2) (2022-04-11)
 
 
