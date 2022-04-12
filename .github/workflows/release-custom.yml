@@ -1,0 +1,94 @@
+name: Real-time config release
+
+# Controls when the workflow will run
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  release-dryrun:
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.1.1
+        with:
+          node-version: 'lts/*'
+        
+      # - name: Install dependencies
+      #  run: npx ci
+      
+      - name: Cat repo release.config.js
+        run: 
+          cat release.config.js
+          
+      - name: Create minimal release.config.js
+        run: |
+          cat <<EOF > release.config.js 
+            module.exports = {
+              'branches': [
+                'master',
+                {
+                  name: 'develop',
+                  prerelease: true
+                },
+              ],
+              'preset': 'conventionalcommits',
+              'tagFormat': 'v\${version}',
+              'plugins': [
+                '@semantic-release/commit-analyzer',
+                ['@semantic-release/release-notes-generator', {
+                    preset: 'conventionalcommits',
+                    "writerOpts": {
+                      "commitsSort": ["perf", "feat", "fix"],
+                    }
+                  }
+                ],
+                ["@semantic-release/exec", {
+                    "verifyReleaseCmd": "echo \${nextRelease.version} > .VERSION"
+                  }
+                ],
+                ['@semantic-release/changelog', {
+                    "changelogFile": "CHANGELOG.md",
+                  }
+                ],
+                ["@semantic-release/git", {
+                    "assets": ["CHANGELOG.md"]
+                  }
+                ],
+              ]
+            }
+          EOF
+     
+      - name: Cat new release.config.js
+        run: 
+          cat release.config.js
+          
+      # semantic-release: it comes pre-installed in GitHub actions by default
+      - name: Install semantic-release extra plugins
+        run: |
+              npm install --save-dev \
+                semantic-release \
+                @semantic-release/commit-analyzer \
+                @semantic-release/changelog \
+                @semantic-release/git \
+                @semantic-release/release-notes-generator \
+                @semantic-release/exec \
+                conventional-changelog-conventionalcommits
+
+      - name: Release
+        id: release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: | 
+          npx semantic-release
+          echo "::set-output name=nextversion::$(cat .VERSION)"
+      
+      - name: Version
+        run: |
+          echo "Next version: ${{ steps.release.outputs.nextversion }}"

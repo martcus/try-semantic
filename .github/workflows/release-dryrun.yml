@@ -1,4 +1,4 @@
-name: Full Release
+name: Full release dry-run
 
 # Controls when the workflow will run
 on:
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  release:
+  release-dryrun:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -36,7 +36,15 @@ jobs:
                 @semantic-release/release-notes-generator \
                 @semantic-release/exec \
                 conventional-changelog-conventionalcommits
-      - name: Release
+      - name: Dry-Run
+        id: dry-run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+        run: |
+          npx semantic-release --dry-run --no-ci
+          echo "::set-output name=nextversion::$(cat .VERSION)"
+      
+      - name: Version
+        run: |
+          echo "Next version: ${{ steps.dry-run.outputs.nextversion }}"
+          

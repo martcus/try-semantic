@@ -1,15 +1,16 @@
 # try-semantic
 
-[![Semantic Release](https://github.com/martcus/try-semantic/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/martcus/try-semantic/actions/workflows/release.yml)
+[![Conventional Commit](https://github.com/martcus/try-semantic/actions/workflows/pr.yml/badge.svg)](https://github.com/martcus/try-semantic/actions/workflows/pr.yml)
+[![Full Release](https://github.com/martcus/try-semantic/actions/workflows/release.yml/badge.svg)](https://github.com/martcus/try-semantic/actions/workflows/release.yml)
+[![Full release dry-run](https://github.com/martcus/try-semantic/actions/workflows/release-dryrun.yml/badge.svg)](https://github.com/martcus/try-semantic/actions/workflows/release-dryrun.yml)
+[![Real-time config release](https://github.com/martcus/try-semantic/actions/workflows/release-custom.yml/badge.svg)](https://github.com/martcus/try-semantic/actions/workflows/release-custom.yml)
+[![Real-time dry-run config release](https://github.com/martcus/try-semantic/actions/workflows/release-dryrun-custom.yml/badge.svg)](https://github.com/martcus/try-semantic/actions/workflows/release-dryrun-custom.yml)
 
-an exercise of using [semantic-release](https://github.com/semantic-release/semantic-release) with [conventionalcommit](https://www.conventionalcommits.org/en/v1.0.0/)
+an exercise of using [semantic-release](https://github.com/semantic-release/semantic-release) and [commitlint](https://commitlint.js.org/) with [conventionalcommit](https://www.conventionalcommits.org/en/v1.0.0/)
 
 ## workflows
-- release.yml
-
-## next task/implementation ideas
-- [ ] https://github.com/martcus/try-semantic/issues/4 Document workflows and configurations in the readme file
-- [x] https://github.com/martcus/try-semantic/issues/5 when a pr is opened, trigger a specific workflow in order check the format of commit messages via [commitlint](https://commitlint.js.org/#/guides-ci-setup)
-- [ ] protect from direct push the master branch via github settings
-
-invalid commit message!!!
+- `pr.yml`: dispatch on a pr [opened, synchronize, reopened, edited], checks the commit messages associated if are conform to the conventional commmit specs
+- `release.yml`: dispatch manually, performs a complete release process
+- `release-dryrun`: dispatch manually, performs a simulation (aka dry-run) of the release process
+- `release-custom.yml`: dispatch manually, performs a complete release process config by a config.release.js write during the workflow run
+- `release-dryrun-custom.yml`: dispatch manually, performs a simulation (aka dry-run) of the release process config by a config.release.js write during the workflow run
