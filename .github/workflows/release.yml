@@ -22,8 +22,8 @@ jobs:
         with:
           node-version: 'lts/*'
         
-     # - name: Install dependencies
-     #   run: npx ci
+      - name: Install dependencies
+        run: npx ci
        
       # semantic-release: it comes pre-installed in GitHub actions by default
       - name: Install semantic-release extra plugins
