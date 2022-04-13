@@ -12,13 +12,12 @@ module.exports = {
     },
   ],
   'tagFormat': 'v${version}',
+  preset: 'conventionalcommits',
   'plugins': [
     ['@semantic-release/commit-analyzer', {
-      preset: 'conventionalcommits',
       }
     ],
     ['@semantic-release/release-notes-generator', {
-        preset: 'conventionalcommits',
         "writerOpts": {
           "commitsSort": ["perf", "feat", "fix"],
         }
