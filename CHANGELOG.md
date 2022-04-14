@@ -1,5 +1,18 @@
 # Semantic Release Changelog
 
+## [4.6.0](https://github.com/martcus/try-semantic/compare/v4.5.0...v4.6.0) (2022-04-14)
+
+
+### Features
+
+* merge develop ([#22](https://github.com/martcus/try-semantic/issues/22)) ([fbb9fce](https://github.com/martcus/try-semantic/commit/fbb9fcef079b7141fa6ecb317b84c3d97d21dd50))
+
+
+### Bug Fixes
+
+* remove test commit ([112c752](https://github.com/martcus/try-semantic/commit/112c7522a077c27b9a0dd1fb9cb5a246a2739575))
+* add channel name ([8a641d3](https://github.com/martcus/try-semantic/commit/8a641d3ad15b7b3a88e440530a633f68a5a1bbb4))
+
 ## [4.6.0-develop.1](https://github.com/martcus/try-semantic/compare/v4.5.1-develop.1...v4.6.0-develop.1) (2022-04-14)
 
 
