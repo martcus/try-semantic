@@ -19,3 +19,4 @@ an exercise of using [semantic-release](https://github.com/semantic-release/sema
 ## Test
 commit to increase patch
 commit to increase minor
+commit to increase minor
