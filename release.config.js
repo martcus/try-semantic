@@ -8,6 +8,7 @@ module.exports = {
     'master',
     {
       'name': 'develop',
+      'channel': 'channel-${name}',
       'prerelease': true
     },
   ],
