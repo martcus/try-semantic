@@ -1,5 +1,12 @@
 # Semantic Release Changelog
 
+## [4.6.0-develop.1](https://github.com/martcus/try-semantic/compare/v4.5.1-develop.1...v4.6.0-develop.1) (2022-04-14)
+
+
+### Features
+
+* **test:** increase minor ([ad08e83](https://github.com/martcus/try-semantic/commit/ad08e836b20de86cd008dc1bad99ca1611f1a599))
+
 ### [4.5.1-develop.1](https://github.com/martcus/try-semantic/compare/v4.5.0...v4.5.1-develop.1) (2022-04-14)
 
 
