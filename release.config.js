@@ -7,38 +7,40 @@ module.exports = {
   'branches': [
     'master',
     {
-      name: 'develop',
-      prerelease: true
+      'name': 'develop',
+      'prerelease': true
     },
   ],
+  'repositoryUrl': 'https://github.com/martcus/try-semantic',
   'tagFormat': 'v${version}',
-  preset: 'conventionalcommits',
+  'preset': 'conventionalcommits',
   'plugins': [
     ['@semantic-release/commit-analyzer', {
       }
     ],
     ['@semantic-release/release-notes-generator', {
-        "writerOpts": {
-          "commitsSort": ["perf", "feat", "fix"],
+        'writerOpts': {
+          'commitsSort': ['perf', 'feat', 'fix'],
         }
       }
     ],
-    ["@semantic-release/exec", {
-        "verifyReleaseCmd": "echo ${nextRelease.version} > .VERSION"
+    ['@semantic-release/exec', {
+        'verifyReleaseCmd': 'echo ${nextRelease.version} > .VERSION'
       }
     ],
     ['@semantic-release/changelog', {
-        "changelogFile": "CHANGELOG.md",
+        'changelogFile': 'CHANGELOG.md',
+        'changelogTitle': '# Semantic Release Changelog'
       }
     ],
-    ["@semantic-release/git", {
-        "assets": ["CHANGELOG.md"]
+    ['@semantic-release/git', {
+        'assets': ['CHANGELOG.md']
       }
     ],
-    ["@semantic-release/github", {
-      "assets": [
-        {"path": "CHANGELOG.md"},
-        {"path": "dist/**", "label": "distribution"}
+    ['@semantic-release/github', {
+      'assets': [
+        {'path': 'CHANGELOG.md'},
+        {'path': 'dist/**', 'label': 'distribution'}
       ]
     }],
   ]
