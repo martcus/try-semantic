@@ -1,4 +1,4 @@
-# try-semantic
+# try-semantic [![semantic-release: angular](https://img.shields.io/badge/semantic--release-convetionalcommit-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
 [![Conventional Commit](https://github.com/martcus/try-semantic/actions/workflows/pr.yml/badge.svg)](https://github.com/martcus/try-semantic/actions/workflows/pr.yml)
 [![Full Release](https://github.com/martcus/try-semantic/actions/workflows/release.yml/badge.svg)](https://github.com/martcus/try-semantic/actions/workflows/release.yml)
