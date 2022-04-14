@@ -1,3 +1,18 @@
+# Semantic Release Changelog
+
+## [4.5.0](https://github.com/martcus/try-semantic/compare/v4.4.3...v4.5.0) (2022-04-14)
+
+
+### Features
+
+* add changelog title ([272a060](https://github.com/martcus/try-semantic/commit/272a060abf541bbf9c8e5917c82690158ed8e83d))
+* **scanning:** add codeql default workflow ([fbe1503](https://github.com/martcus/try-semantic/commit/fbe15030ba2d9ea13549f7426a02f8f621996a31))
+
+
+### Bug Fixes
+
+* global option ([fb0f5ae](https://github.com/martcus/try-semantic/commit/fb0f5aef0f3afb57f22963ba8fa75a10e5148bfb))
+
 ### [4.4.3](https://github.com/martcus/try-semantic/compare/v4.4.2...v4.4.3) (2022-04-12)
 
 
