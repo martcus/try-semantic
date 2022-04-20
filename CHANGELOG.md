@@ -1,5 +1,25 @@
 # Semantic Release Changelog
 
+## [5.0.0](https://github.com/martcus/try-semantic/compare/v4.6.0...v5.0.0) (2022-04-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* this is a breaking change O_O
+
+### Features
+
+* this is a breaking change O_O ([6c756ec](https://github.com/martcus/try-semantic/commit/6c756ec68de15a40efbf78c319b06ac8c426dd23))
+* add step to exec ([0e58b58](https://github.com/martcus/try-semantic/commit/0e58b58080725251fbd525ef0ca3eb9e371bdf7e))
+* add script to prepare release ([44f657c](https://github.com/martcus/try-semantic/commit/44f657ce8f5b739be143c2d080ae9d2ee46292e1))
+
+
+### Bug Fixes
+
+* remove npm dependabot ([a5fd821](https://github.com/martcus/try-semantic/commit/a5fd8217b2ec755d17ebd5fa7a7f10797c8ef682))
+* simulate prepare-release valid step ([ba6de39](https://github.com/martcus/try-semantic/commit/ba6de39718b683d2f4f451205a91bc1112d4de7d))
+* config ([6e1e00a](https://github.com/martcus/try-semantic/commit/6e1e00a053b854a8203eca96fa88791aff272ae2))
+
 ## [4.6.0](https://github.com/martcus/try-semantic/compare/v4.5.0...v4.6.0) (2022-04-14)
 
 
