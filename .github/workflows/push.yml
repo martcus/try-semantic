@@ -28,4 +28,4 @@ jobs:
   
       - name: Validate all commits from PR
         run: |
-          npx commitlint --from ${{ github.event.push.head_commit.id }} --to ${{ github.event.push.head_commit.id }} --verbose
+          npx commitlint --from ${{ github.event.push.after }} --to ${{ github.event.push.after }} --verbose
