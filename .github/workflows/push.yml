@@ -28,4 +28,10 @@ jobs:
 
       - name: Validate push commits
         run: |
+          echo ${{ github.sha }}
+          npx commitlint --from=${{ github.sha }} --verbose
+
+
+      - name: Validate push commits
+        run: |
           npx commitlint --from=HEAD~1 --verbose
