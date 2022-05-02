@@ -26,11 +26,6 @@ jobs:
                 @commitlint/cli \
                 @commitlint/config-conventional
 
-      - name: Show GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
-
-      - name: Validate all commits from PR
+      - name: Validate push commits
         run: |
           npx commitlint --from ${{ github.sha }} --to ${{ github.sha }} --verbose
