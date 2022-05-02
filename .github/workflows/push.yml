@@ -6,7 +6,7 @@ jobs:
   commitlint:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -14,18 +14,23 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.1.1
         with:
           node-version: 'lts/*'
-      
+
       - name: Install commitlint plugins
         run: |
               npm install --save-dev \
                 @commitlint/cli \
                 @commitlint/config-conventional
-  
+
+      - name: Show GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+
       - name: Validate all commits from PR
         run: |
-          npx commitlint --from ${{ github.event.push.after }} --to ${{ github.event.push.after }} --verbose
+          npx commitlint --from ${{ github.sha }} --to ${{ github.sha }} --verbose
