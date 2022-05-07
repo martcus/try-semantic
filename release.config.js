@@ -10,7 +10,7 @@ module.exports = isDryRun() ? getDryRunConfig() : getReleaseConfig();
 console.log(getReleaseConfig2(isDryRun()))
 
 function getReleaseConfig2(isDryRun) {
-  console.log("isDryRun": isDryRun)
+  console.log("isDryRun: " + isDryRun)
   branches = ""
   if (isDryRun == false) {
     branches = {
