@@ -5,7 +5,7 @@
 
 const { execSync } = require('child_process');
 
-module.exports = getReleaseConfig();
+module.exports = isDryRun() ? getDryRunConfig() : getReleaseConfig();
 
 function getReleaseConfig() {
   return {
@@ -52,4 +52,24 @@ function getReleaseConfig() {
       }],
     ]
   }
+}
+
+function getDryRunConfig() {
+  return {
+    branches: getCurrentBranch(),
+    plugins: [
+      '@semantic-release/commit-analyzer',
+      '@semantic-release/release-notes-generator',
+    ],
+  };
+}
+
+function isDryRun() {
+  return process.argv.includes('--dry-run');
+}
+
+function getCurrentBranch() {
+  return execSync('git rev-parse --abbrev-ref HEAD')
+    .toString()
+    .trim();
 }
