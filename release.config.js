@@ -158,6 +158,7 @@ function isDryRun() {
 }
 
 function getCurrentBranch() {
+  console.log(execSync('git rev-parse --abbrev-ref HEAD'))
   return execSync('git rev-parse --abbrev-ref HEAD')
     .toString()
     .trim();
