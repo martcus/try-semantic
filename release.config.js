@@ -5,7 +5,9 @@
 
 const { execSync } = require('child_process');
 
-module.exports = isDryRun() ? getDryRunConfig() : getReleaseConfig();
+module.exports = getReleaseConfig2(isDryRun);
+
+// isDryRun() ? getDryRunConfig() : getReleaseConfig();
 
 console.log(getReleaseConfig2(isDryRun()))
 
