@@ -24,8 +24,11 @@ function getReleaseConfig2(isDryRun) {
      ],
     }
   } else {
-    branches: getCurrentBranch()
-    console.log(branches)
+    branches = {
+      'branches': [
+        getCurrentBranch(),
+      ]
+    }
   }
 
   return {
