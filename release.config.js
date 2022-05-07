@@ -7,6 +7,64 @@ const { execSync } = require('child_process');
 
 module.exports = isDryRun() ? getDryRunConfig() : getReleaseConfig();
 
+console.log(getReleaseConfig2(isDryRun()))
+
+function getReleaseConfig2(isDryRun) {
+  branches = ""
+  if (isDryRun == false) {
+    branches = {
+      'branches': [
+        'master',
+        {
+          'name': 'develop',
+          'channel': 'channel-${name}',
+          'prerelease': true
+        },
+     ],
+    }
+  } else {
+    branches: getCurrentBranch()
+  }
+
+  return {
+     branches,
+    'repositoryUrl': 'https://github.com/martcus/try-semantic',
+    'tagFormat': 'v${version}',
+    'preset': 'conventionalcommits',
+    'plugins': [
+      ['@semantic-release/commit-analyzer', {
+        }
+      ],
+      ['@semantic-release/release-notes-generator', {
+          'writerOpts': {
+            'commitsSort': ['perf', 'feat', 'fix'],
+          }
+        }
+      ],
+      ['@semantic-release/exec', {
+          'verifyReleaseCmd': 'echo ${nextRelease.version} > .VERSION',
+          'prepareCmd': './prepare-release.sh ${nextRelease.version}'
+        }
+      ],
+      ['@semantic-release/changelog', {
+          'changelogFile': 'CHANGELOG.md',
+          'changelogTitle': '# Semantic Release Changelog'
+        }
+      ],
+      ['@semantic-release/git', {
+          'assets': ['CHANGELOG.md']
+        }
+      ],
+      ['@semantic-release/github', {
+        'assets': [
+          {'path': 'CHANGELOG.md'},
+          {'path': 'dist/**', 'label': 'distribution'}
+        ]
+      }],
+    ]
+  }
+}
+
 function getReleaseConfig() {
   return {
     'branches': [
