@@ -10,7 +10,7 @@ module.exports = isDryRun() ? getDryRunConfig() : getReleaseConfig();
 console.log(getReleaseConfig2(isDryRun()))
 
 function getReleaseConfig2(isDryRun) {
-  console.log(isDryRun)
+  console.log("isDryRun": isDryRun)
   branches = ""
   if (isDryRun == false) {
     branches = {
@@ -25,6 +25,7 @@ function getReleaseConfig2(isDryRun) {
     }
   } else {
     branches: getCurrentBranch()
+    console.log(branches)
   }
 
   return {
@@ -158,8 +159,7 @@ function isDryRun() {
 }
 
 function getCurrentBranch() {
-  console.log(execSync('git rev-parse --abbrev-ref HEAD'))
-  return execSync('git rev-parse --abbrev-ref HEAD')
-    .toString()
-    .trim();
+  currentBranch = execSync('git rev-parse --abbrev-ref HEAD').toString().trim();
+  console.log(currentBranch)
+  return currentBranch
 }
