@@ -1,5 +1,26 @@
 # Semantic Release Changelog
 
+## [6.0.0](https://github.com/martcus/try-semantic/compare/v5.0.0...v6.0.0) (2022-05-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **script:** this is a test
+
+### Features
+
+* **workflow:** add commitlint to push ([7bb0ae0](https://github.com/martcus/try-semantic/commit/7bb0ae0af58672ec4d762125661f0af0dae0cfd6))
+* **script:** update ([bb149c0](https://github.com/martcus/try-semantic/commit/bb149c0f0f31b00b04ccca59acfefadfc86b2419))
+* simulate error in prepare ([5d25c55](https://github.com/martcus/try-semantic/commit/5d25c5535491fe69ef8ee29cf163ac0db0c1f083))
+
+
+### Bug Fixes
+
+* **workflow:** test ([91faa39](https://github.com/martcus/try-semantic/commit/91faa395ee2e128336f7f1fa287161bb89d969cc))
+* **workflow:** Do or do not. There is no try ([3f8fbf7](https://github.com/martcus/try-semantic/commit/3f8fbf700547f7be1d0cacf77769352ceb086fd5))
+* **workflow:** try to fix sha ([26b9825](https://github.com/martcus/try-semantic/commit/26b982500d04efe53fb450e086fb81bbdf7e230f))
+* **workflow:** fix range commit ([3e979b4](https://github.com/martcus/try-semantic/commit/3e979b4f4b4a04841b54e7f4a94e425e20db9a72))
+
 ## [5.0.0](https://github.com/martcus/try-semantic/compare/v4.6.0...v5.0.0) (2022-04-20)
 
 
