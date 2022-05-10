@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.0.2
         with:
-          token: ${{ secrets.SEMANTICRELEASE }}
+          token: ${{ secrets.GITHUB_TOKEN }}
          #  persist-credentials: 'false'
       
       - name: Setup Node.js environment
@@ -46,6 +46,6 @@ jobs:
       
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.SEMANTICRELEASE }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npx semantic-release --debug
