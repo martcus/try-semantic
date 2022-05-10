@@ -1,5 +1,12 @@
 # Semantic Release Changelog
 
+### [6.0.2](https://github.com/martcus/try-semantic/compare/v6.0.1...v6.0.2) (2022-05-10)
+
+
+### Bug Fixes
+
+* galactic test ([2f58b1f](https://github.com/martcus/try-semantic/commit/2f58b1f55d4f0f9054723993bc6c84b5dff85211))
+
 ### [6.0.1](https://github.com/martcus/try-semantic/compare/v6.0.0...v6.0.1) (2022-05-10)
 
 
