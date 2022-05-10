@@ -1,5 +1,12 @@
 # Semantic Release Changelog
 
+## [6.1.0](https://github.com/martcus/try-semantic/compare/v6.0.2...v6.1.0) (2022-05-10)
+
+
+### Features
+
+* protected branches rulez ([e748532](https://github.com/martcus/try-semantic/commit/e748532936eab338c5488184e318ce93d1bba031))
+
 ### [6.0.2](https://github.com/martcus/try-semantic/compare/v6.0.1...v6.0.2) (2022-05-10)
 
 
