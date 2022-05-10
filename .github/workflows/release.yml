@@ -36,9 +36,14 @@ jobs:
                 @semantic-release/release-notes-generator \
                 @semantic-release/exec \
                 conventional-changelog-conventionalcommits
+      
+      - name: Prepare script
+        run: |
+          chmod +x prepare-release.sh
+      
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.semanticrelease }}
+          GH_TOKEN: ${{ secrets.semanticrelease }}
         run: |
-          chmod +x prepare-release.sh
           npx semantic-release
