@@ -38,8 +38,6 @@ jobs:
                 conventional-changelog-conventionalcommits
       - name: Dry-Run
         id: dry-run
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npx semantic-release --dry-run --no-ci
           echo "::set-output name=nextversion::$(cat .VERSION)"
