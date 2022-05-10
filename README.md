@@ -14,3 +14,4 @@ an exercise of using [semantic-release](https://github.com/semantic-release/sema
 - `release-dryrun`: dispatch manually, performs a simulation (aka dry-run) of the release process
 - `release-custom.yml`: dispatch manually, performs a complete release process config by a config.release.js write during the workflow run
 - `release-dryrun-custom.yml`: dispatch manually, performs a simulation (aka dry-run) of the release process config by a config.release.js write during the workflow run
+
