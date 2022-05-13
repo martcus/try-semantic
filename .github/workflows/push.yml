@@ -30,15 +30,9 @@ jobs:
       - name: Validate push commits
         run: |
           npx commitlint --from=HEAD~1 --verbose
-          
+
       - name: Print sha
         run: |
           echo "After: ${{ github.event.after }}"
           echo "Before: ${{ github.event.before }}"
           npx commitlint --from ${{ github.event.before }} --to ${{ github.event.after }} --verbose
-
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: |
-          echo "$GITHUB_CONTEXT"
