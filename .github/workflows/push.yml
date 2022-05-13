@@ -30,3 +30,10 @@ jobs:
       - name: Validate push commits
         run: |
           npx commitlint --from=HEAD~1 --verbose
+
+      - name: Test
+        run: |
+          ${ github.event.push }}
+          ${{ github.event.push.before.sha }}
+          ${{ github.event.push.head.sha }}
+          
