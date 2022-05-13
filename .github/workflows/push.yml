@@ -36,4 +36,3 @@ jobs:
           ${ github.event.push }}
           ${{ github.event.push.before.sha }}
           ${{ github.event.push.head.sha }}
-          
