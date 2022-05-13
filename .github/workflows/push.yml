@@ -31,8 +31,8 @@ jobs:
         run: |
           npx commitlint --from=HEAD~1 --verbose
 
-      - name: Test
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |
-          ${{ github.event.push }}
-          ${{ github.event.push.before.sha }}
-          ${{ github.event.push.head.sha }}
+          echo "$GITHUB_CONTEXT"
