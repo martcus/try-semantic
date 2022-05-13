@@ -31,8 +31,6 @@ jobs:
         run: |
           npx commitlint --from=HEAD~1 --verbose
 
-      - name: Print sha
+      - name: Validate all pushed commits
         run: |
-          echo "After: ${{ github.event.after }}"
-          echo "Before: ${{ github.event.before }}"
           npx commitlint --from ${{ github.event.before }} --to ${{ github.event.after }} --verbose
