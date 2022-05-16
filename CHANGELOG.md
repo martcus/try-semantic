@@ -1,5 +1,22 @@
 # Semantic Release Changelog
 
+## [6.2.0](https://github.com/martcus/try-semantic/compare/v6.1.0...v6.2.0) (2022-05-16)
+
+
+### Features
+
+* test ([46bb9aa](https://github.com/martcus/try-semantic/commit/46bb9aa9cb772843ca98c7ba02d0798a2b1bbafb))
+* dump context ([923d866](https://github.com/martcus/try-semantic/commit/923d866a5e6e62ea17e99d4a0c646baa062ddd44))
+
+
+### Bug Fixes
+
+* change step name ([30e26a8](https://github.com/martcus/try-semantic/commit/30e26a85e56437585f80270894e1d8bb1f0835d7))
+* remove unused step ([98e7e38](https://github.com/martcus/try-semantic/commit/98e7e38cead2e2717c67f6c4ee53a080093ef101))
+* fix ([43d79f3](https://github.com/martcus/try-semantic/commit/43d79f31cdb66120f91de01006b7454e38fd5b64))
+* test ([ed6b937](https://github.com/martcus/try-semantic/commit/ed6b937d88439aa18d4d733a827877aa51ea354a))
+* remove debug ([2291ff2](https://github.com/martcus/try-semantic/commit/2291ff2de1e24c76f5a33e35c8965713a0ee0752))
+
 ## [6.1.0](https://github.com/martcus/try-semantic/compare/v6.0.2...v6.1.0) (2022-05-10)
 
 
