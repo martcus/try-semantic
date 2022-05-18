@@ -53,6 +53,5 @@ jobs:
           
       - name: Happy ending
         run: |
-          echo "### Summary" >> $GITHUB_STEP_SUMMARY
-          echo "Release " ${{ steps.dry-run.outputs.nextversion }} "created!" >> $GITHUB_STEP_SUMMARY
+          echo "Release " ${{ steps.release.outputs.nextversion }} "created!" >> $GITHUB_STEP_SUMMARY
 
