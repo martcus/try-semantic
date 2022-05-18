@@ -44,11 +44,15 @@ jobs:
           chmod +x prepare-release.sh
       
       - name: Release
+        id: release
         env:
           GITHUB_TOKEN: ${{ secrets.SEMANTICRELEASE }}
         run: |
           npx semantic-release
+          echo "::set-output name=nextversion::$(cat .VERSION)"
           
       - name: Happy ending
         run: |
-          cat CHANGELOG.md >> $GITHUB_STEP_SUMMARY
+          echo "### Summary" >> $GITHUB_STEP_SUMMARY
+          echo "Release " ${{ steps.dry-run.outputs.nextversion }} "created!" >> $GITHUB_STEP_SUMMARY
+
