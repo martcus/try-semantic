@@ -1,5 +1,12 @@
 # Semantic Release Changelog
 
+## [6.3.0](https://github.com/martcus/try-semantic/compare/v6.2.0...v6.3.0) (2022-05-18)
+
+
+### Features
+
+* add job summary ([ef2600b](https://github.com/martcus/try-semantic/commit/ef2600b8821f1bcec4494ccd25404ef9dab4f151))
+
 ## [6.2.0](https://github.com/martcus/try-semantic/compare/v6.1.0...v6.2.0) (2022-05-16)
 
 
