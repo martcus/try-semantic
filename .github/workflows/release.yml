@@ -53,5 +53,5 @@ jobs:
           
       - name: Happy ending
         run: |
-          echo "Release ${{ steps.release.outputs.nextversion }} created!" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Release ${{ steps.release.outputs.nextversion }} created!" >> $GITHUB_STEP_SUMMARY
 
