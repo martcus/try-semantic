@@ -1,5 +1,12 @@
 # Semantic Release Changelog
 
+### [6.3.3](https://github.com/martcus/try-semantic/compare/v6.3.2...v6.3.3) (2022-05-18)
+
+
+### Bug Fixes
+
+* new message ([f78a130](https://github.com/martcus/try-semantic/commit/f78a1300592dc9ad5a5b2cf7680d9d9c20397235))
+
 ### [6.3.2](https://github.com/martcus/try-semantic/compare/v6.3.1...v6.3.2) (2022-05-18)
 
 
