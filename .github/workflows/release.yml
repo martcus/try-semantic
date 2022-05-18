@@ -48,3 +48,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.SEMANTICRELEASE }}
         run: |
           npx semantic-release
+          
+      - name: Happy ending
+        run: |
+          cat CHANGELOG.md >> $GITHUB_STEP_SUMMARY
