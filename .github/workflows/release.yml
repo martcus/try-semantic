@@ -54,5 +54,9 @@ jobs:
           
       - name: Happy ending
         run: |
-          echo "✅ Release ${{ steps.release.outputs.nextversion }} created!" >> $GITHUB_STEP_SUMMARY
+          if [[ ! -z "${{ steps.release.outputs.nextversion }}" ]]; then
+            echo "✅ Release ${{ steps.release.outputs.nextversion }} created!" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ No relevant changes, no new version is released!" >> $GITHUB_STEP_SUMMARY
+          fi
 
