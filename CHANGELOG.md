@@ -1,5 +1,12 @@
 # Semantic Release Changelog
 
+### [6.3.4](https://github.com/martcus/try-semantic/compare/v6.3.3...v6.3.4) (2022-05-19)
+
+
+### Bug Fixes
+
+* **workflow:** fetch all history ([f2b9c11](https://github.com/martcus/try-semantic/commit/f2b9c113b0abd86eccadd65f7597bc2e0dc8c090))
+
 ### [6.3.3](https://github.com/martcus/try-semantic/compare/v6.3.2...v6.3.3) (2022-05-18)
 
 
