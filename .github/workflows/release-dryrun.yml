@@ -55,6 +55,7 @@ jobs:
       - name: Notes
         run: |
           echo "Notes:"
+          echo "${{ steps.dry-run.outputs.nextnotes }}"
           echo "${{ steps.dry-run.outputs.nextnotes }}"  >> $GITHUB_STEP_SUMMARY
 
       - name: Release
