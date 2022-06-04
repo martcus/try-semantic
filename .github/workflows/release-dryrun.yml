@@ -44,6 +44,11 @@ jobs:
           npx semantic-release --dry-run --no-ci
           echo "::set-output name=nextversion::$(cat .VERSION)"
           echo "::set-output name=nextnotes::$(cat .NOTES)"
+          echo "::set-output name=nextnotes::$(cat .RELEASE)"
+
+          cat .VERSION
+          cat. NOTES
+          cat .RELEASE
 
       - name: Version
         run: |
@@ -52,3 +57,7 @@ jobs:
       - name: Notes
         run: |
           echo "${{ steps.dry-run.outputs.nextnotes }}"
+
+      - name: Release
+        run: |
+          echo "${{ steps.dry-run.outputs.release }}"
