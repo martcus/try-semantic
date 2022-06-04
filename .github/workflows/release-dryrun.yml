@@ -43,9 +43,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.SEMANTICRELEASE }}
         run: |
-          npx semantic-release --dry-run --debug
+          npx semantic-release --dry-run
           echo "::set-output name=nextversion::$(cat .VERSION)"
-
+          echo "::set-output name=nextnotes::$(cat .NOTES)"
 
       - name: Version
         run: |
