@@ -47,7 +47,7 @@ jobs:
           echo "::set-output name=nextnotes::$(cat .RELEASE)"
 
           cat .VERSION
-          cat. NOTES
+          cat .NOTES
           cat .RELEASE
 
       - name: Version
