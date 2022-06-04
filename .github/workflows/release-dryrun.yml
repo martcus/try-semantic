@@ -45,18 +45,18 @@ jobs:
         run: |
           npx semantic-release --dry-run
           echo "::set-output name=nextversion::$(cat .VERSION)"
-          echo "::set-output name=nextnotes::$(cat .NOTES)"
-          cat .NOTES  >> $GITHUB_STEP_SUMMARY
 
       - name: Version
         run: |
           echo "Next version: ${{ steps.dry-run.outputs.nextversion }}"
 
-      - name: Notes
-        run: |
-          echo "Notes:"
-          echo "${{ steps.dry-run.outputs.nextnotes }}"
-
       - name: Release
         run: |
-          echo "${{ steps.dry-run.outputs.release }}"
+          nextversion=$(cat .VERSION)
+          regex="^([0-9].[0-9].[0-9](-[A-Za-z].[0-9])?)"
+          if [[ $nextversion =~ $regex ]]; then
+            echo "✅ Release $nextversion will be published!" >> $GITHUB_STEP_SUMMARY
+            cat .NOTES  >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ There are no relevant changes, so no new version is released!" >> $GITHUB_STEP_SUMMARY
+          fi
