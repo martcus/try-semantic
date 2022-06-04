@@ -45,6 +45,7 @@ jobs:
         run: |
           npx semantic-release --dry-run --no-ci
           echo "::set-output name=nextversion::$(cat .VERSION)"
+          cat .NOTES
 
       - name: Version
         run: |
