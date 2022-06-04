@@ -26,7 +26,7 @@ module.exports = {
       }
     ],
     ['@semantic-release/exec', {
-        'verifyReleaseCmd': 'echo ${nextRelease.version} > .VERSION; node verifyRelease.js ${nextRelease}',
+        'verifyReleaseCmd': 'echo ${nextRelease.version} > .VERSION; echo ${nextRelease.notes}',
         'prepareCmd': './prepare-release.sh ${nextRelease.version}'
       }
     ],
