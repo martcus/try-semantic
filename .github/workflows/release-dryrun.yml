@@ -43,7 +43,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.SEMANTICRELEASE }}
         run: |
-          npx semantic-release --dry-run
+          npx semantic-release --dry-run --branches "${GITHUB_REF#refs/heads/}"
           echo "::set-output name=nextversion::$(cat .VERSION)"
 
       - name: Version
@@ -55,8 +55,7 @@ jobs:
           nextversion=$(cat .VERSION)
           regex="^([0-9].[0-9].[0-9](-[A-Za-z].[0-9])?)"
           if [[ $nextversion =~ $regex ]]; then
-            echo "# ✅ Release $nextversion will be published!" >> $GITHUB_STEP_SUMMARY
-            echo "## Changelog" >> $GITHUB_STEP_SUMMARY
+            echo "## ✅ Release $nextversion will be published!" >> $GITHUB_STEP_SUMMARY
             cat .NOTES  >> $GITHUB_STEP_SUMMARY
           else
             echo "❌ There are no relevant changes, so no new version is released!" >> $GITHUB_STEP_SUMMARY
