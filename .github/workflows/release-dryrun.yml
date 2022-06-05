@@ -55,7 +55,7 @@ jobs:
           nextversion=$(cat .VERSION)
           regex="^([0-9].[0-9].[0-9](-[A-Za-z].[0-9])?)"
           if [[ $nextversion =~ $regex ]]; then
-            echo "✅ Release $nextversion will be published!" >> $GITHUB_STEP_SUMMARY
+            echo "# ✅ Release $nextversion will be published!" >> $GITHUB_STEP_SUMMARY
             echo "## Changelog" >> $GITHUB_STEP_SUMMARY
             cat .NOTES  >> $GITHUB_STEP_SUMMARY
           else
