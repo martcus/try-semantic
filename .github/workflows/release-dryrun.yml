@@ -56,6 +56,7 @@ jobs:
           regex="^([0-9].[0-9].[0-9](-[A-Za-z].[0-9])?)"
           if [[ $nextversion =~ $regex ]]; then
             echo "✅ Release $nextversion will be published!" >> $GITHUB_STEP_SUMMARY
+            echo "## Changelog" >> $GITHUB_STEP_SUMMARY
             cat .NOTES  >> $GITHUB_STEP_SUMMARY
           else
             echo "❌ There are no relevant changes, so no new version is released!" >> $GITHUB_STEP_SUMMARY
