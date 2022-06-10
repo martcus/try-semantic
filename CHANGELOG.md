@@ -1,5 +1,36 @@
 # Semantic Release Changelog
 
+## [7.0.0](https://github.com/martcus/try-semantic/compare/v6.4.1...v7.0.0) (2022-06-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* new summary!
+
+### Features
+
+* branch ([e3a9cd7](https://github.com/martcus/try-semantic/commit/e3a9cd7459d85524c87dea129064008895634aef))
+* new summary! ([2fc446c](https://github.com/martcus/try-semantic/commit/2fc446cf7745117694cc1ea5444828abceddf60e))
+* change summary ([61a9f96](https://github.com/martcus/try-semantic/commit/61a9f96d21b0d62cf8ed714c505afb44e85c58d8))
+
+
+### Bug Fixes
+
+* the blinking lights of the antenna tower came into focus just as I heard a loud snap. erin accidentally created a new universe ([ad75f6a](https://github.com/martcus/try-semantic/commit/ad75f6a995ae0216ae6880cd9994e3e1bd95c6ff))
+* The blinking lights of the antenna tower came into focus just as I heard a loud snap. Erin accidentally created a new universe. ([083148c](https://github.com/martcus/try-semantic/commit/083148c4e7d43d8b09b25c744608830227567a69))
+* test ([4107c20](https://github.com/martcus/try-semantic/commit/4107c20a74bd322e526ae090a7d54ffdca8f3cfa))
+* test summary ([c54c389](https://github.com/martcus/try-semantic/commit/c54c3891e3612e5312af7b259f68dcc3d19fd622))
+* tst ([9ddcd39](https://github.com/martcus/try-semantic/commit/9ddcd3997926843517d85c4b791af14c442b70e8))
+* pray ([d972d5c](https://github.com/martcus/try-semantic/commit/d972d5c65e07c3ec5c7e104f446f15b2df7ced51))
+* another one ([0556bcf](https://github.com/martcus/try-semantic/commit/0556bcf6e1615c644b7367a8f1a055eb4ac4f0a6))
+* another test ([bad5e71](https://github.com/martcus/try-semantic/commit/bad5e7177824ee73b6bec0c1ecf80abb7598205f))
+* test ([07f69bc](https://github.com/martcus/try-semantic/commit/07f69bcf965448b8b9de18f5f0687b08720ed38d))
+* test ([41ac44c](https://github.com/martcus/try-semantic/commit/41ac44ca07f841a60253b921a8c10775eca41703))
+* test ([75a09b4](https://github.com/martcus/try-semantic/commit/75a09b4b0507a7804bf3bfea139033cd1c03360a))
+* test ([f9e74f4](https://github.com/martcus/try-semantic/commit/f9e74f4ae8da1001f7334f1c61a38527575dfc63))
+* test ([d66d377](https://github.com/martcus/try-semantic/commit/d66d377b75327b68a01b48b3a9a9b00eabe7185a))
+* test ([3971ae1](https://github.com/martcus/try-semantic/commit/3971ae1cc5d8b77ad1fb9d9d4ae96a5da22d7a17))
+
 ## [6.4.1](https://github.com/martcus/try-semantic/compare/v6.4.0...v6.4.1) (2022-06-04)
 
 
