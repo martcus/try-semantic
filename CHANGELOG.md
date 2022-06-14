@@ -1,5 +1,17 @@
 # Semantic Release Changelog
 
+## [4.6.0-develop.2](https://github.com/martcus/try-semantic/compare/v4.6.0-develop.1...v4.6.0-develop.2) (2022-06-14)
+
+
+### Features
+
+* increase minor ([a82e41e](https://github.com/martcus/try-semantic/commit/a82e41ee450a10976b0d99468d02ea0d792cea42))
+
+
+### Bug Fixes
+
+* add badge ([a17f6b3](https://github.com/martcus/try-semantic/commit/a17f6b331cf80ff2c416116d937676f1deb616aa))
+
 ## [4.6.0-develop.1](https://github.com/martcus/try-semantic/compare/v4.5.1-develop.1...v4.6.0-develop.1) (2022-04-14)
 
 
